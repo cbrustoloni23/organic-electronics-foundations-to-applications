@@ -1,5 +1,5 @@
 # Use Red Hat's Universal Base Image (UBI) for PHP—no Docker Hub rate limits!
-FROM registry.access.redhat.com/ubi8/php-8.2
+FROM registry.access.redhat.com/ubi8/php-8.2-ubi
 
 USER root
 
