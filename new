@@ -1,0 +1,49 @@
+<tr>
+ <td valign="top">
+  <label for="instit">Institution or Company*: </label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="instit" maxlength="80" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="dept">Department: </label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="dept" maxlength="30" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="teach">Are you using this material for a course? </label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="teach" maxlength="30" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="level">Course Level: </label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="level" maxlength="30" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="improvements">Comments for what needs improvement: </label>
+ </td>
+ <td valign="top">
+  <textarea  name="improvements" maxlength="1000" cols="25" rows="6"></textarea>
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="workswell">Comments for what works well: </label>
+ </td>
+ <td valign="top">
+  <textarea  name="workswell" maxlength="1000" cols="25" rows="6"></textarea>
+ </td>
+</tr>
+
