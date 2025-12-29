@@ -6,7 +6,8 @@ if (!empty($_POST["signup-btn"])) {
 
     // Server-side reCAPTCHA validation
     $captcha = $_POST['g-recaptcha-response'];
-    $key = '6Lf4BBsqAAAAAH4wz-fkiR1s7y32tcQSfpuP2ON7';  // Replace with your actual reCAPTCHA secret key
+    #$key = '6Lf4BBsqAAAAAH4wz-fkiR1s7y32tcQSfpuP2ON7';  // Replace with your actual reCAPTCHA secret key
+    $key = '6LfP6DksAAAAAHUN6qwpVbGqdeQKI_UGnQWdoOWB';  // Replace with your actual reCAPTCHA secret key
     $url = 'https://www.google.com/recaptcha/api/siteverify';
 
     // Verify reCAPTCHA with Google
@@ -120,7 +121,8 @@ if (!empty($_POST["signup-btn"])) {
                                name="confirm-password" id="confirm-password">
                     </div>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6Lf4BBsqAAAAAMVvcqeLEkTrtHbmB4oy-8IP_NyW"></div>
+                <div class="g-recaptcha" data-sitekey="6LfP6DksAAAAAKzdVlsCtnV3YQZA80GAG-93bbBW"></div>
+
 
                 <div class="row">
                     <input class="sign-up-btn" type="submit" name="signup-btn" id="signup-btn" value="Sign up">
