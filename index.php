@@ -1,21 +1,7 @@
-<?php
+<?php 
+use Phppot\Member;
+
 session_start();
-
-$loginResult = "";
-
-// If user is already logged in, send them to home.php
-if (!empty($_SESSION["username"])) {
-    header("Location: ./home.php");
-    exit;
-}
-
-// Process login before any HTML is sent
-if (!empty($_POST["login-btn"])) {
-    require_once __DIR__ . "/Model/Member.php";
-
-    $member = new \Phppot\Member();
-    $loginResult = $member->loginMember();
-}
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

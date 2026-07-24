@@ -8,8 +8,7 @@ class Member
 
     function __construct()
     {
-        require_once __DIR__ . '/../lib/DataSource.php';
-
+        require_once __DIR__ . './../lib/DataSource.php';
         $this->ds = new DataSource();
     }
 
@@ -67,29 +66,23 @@ class Member
     }
 
     public function loginMember()
-{
-    $username = $_POST["username"] ?? "";
-    $password = $_POST["signup-password"] ?? "";
-
-    if (empty($username) || empty($password)) {
-        return "Invalid username or password.";
+    {
+        $loginUserResult = $this->getMember($_POST["username"]);
+        if (! empty($_POST["signup-password"])) {
+            $password = $_POST["signup-password"];
+        }
+        $hashedPassword = $loginUserResult[0]["password"];
+        $loginPassword = 0;
+        if (password_verify($password, $hashedPassword)) {
+            $loginPassword = 1;
+        }
+        if ($loginPassword == 1) {
+            $_SESSION["username"] = $loginUserResult[0]["username"];
+            $url = "./home.php";
+            header("Location: $url");
+        } else if ($loginPassword == 0) {
+            $loginStatus = "Invalid username or password.";
+            return $loginStatus;
+        }
     }
-
-    $loginUserResult = $this->getMember($username);
-
-    if (empty($loginUserResult) || !isset($loginUserResult[0]["password"])) {
-        return "Invalid username or password.";
-    }
-
-    $hashedPassword = $loginUserResult[0]["password"];
-
-    if (password_verify($password, $hashedPassword)) {
-        $_SESSION["username"] = $loginUserResult[0]["username"];
-
-        header("Location: ./home.php");
-        exit;
-    }
-
-    return "Invalid username or password.";
-}
 }
