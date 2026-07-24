@@ -81,6 +81,7 @@ class Member
             $_SESSION["username"] = $loginUserResult[0]["username"];
             $url = "./courseguide.php";
             header("Location: $url");
+            exit;
         } else if ($loginPassword == 0) {
             $loginStatus = "Invalid username or password.";
             return $loginStatus;
