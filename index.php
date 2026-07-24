@@ -1,7 +1,8 @@
 <?php 
-use Phppot\Member;
-
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,7 +38,7 @@ session_start();
 	<div id="menu">
 		<ul>
 			<li class="current_page_item"><a href="index.php">Home</a></li>
-			<li><a href="courseguide.html">Course Guide</a></li>
+			<li><a href="Member.php">Course Guide</a></li>
 			<li><a href="errata.html">Corrections and Additions</a></li>
 			<li><a href="about.html">About</a></li>
 			<li><a href="bookcontact.html">Contact</a></li>
