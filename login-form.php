@@ -80,7 +80,6 @@ function loginValidation() {
 
 <?php
 require_once __DIR__ . '/Member.php';
-require_once __DIR__ . '/DataSource.php';
 
 use Phppot\Member;
 $loginResult = '';
