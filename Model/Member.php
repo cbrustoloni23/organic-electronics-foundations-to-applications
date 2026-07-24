@@ -78,7 +78,7 @@ class Member
         }
         if ($loginPassword == 1) {
             $_SESSION["username"] = $loginUserResult[0]["username"];
-            $url = "./book/onesemester.php";
+            $url = "./courseguide.php";
             header("Location: $url");
         } else if ($loginPassword == 0) {
             $loginStatus = "Invalid username or password.";
