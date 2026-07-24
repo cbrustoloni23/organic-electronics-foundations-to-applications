@@ -38,7 +38,7 @@ ini_set('display_errors', 1);
 	<div id="menu">
 		<ul>
 			<li class="current_page_item"><a href="index.php">Home</a></li>
-			<li><a href="courseguide.html">Course Guide</a></li>
+			<li><a href="courseguide.php">Course Guide</a></li>
 			<li><a href="errata.html">Corrections and Additions</a></li>
 			<li><a href="about.html">About</a></li>
 			<li><a href="bookcontact.html">Contact</a></li>
