@@ -1,7 +1,14 @@
-<?php 
-use Phppot\Member;
-
+<?php
 session_start();
+
+$loginResult = "";
+
+if (!empty($_POST["login-btn"])) {
+    require_once __DIR__ . "/Model/Member.php";
+
+    $member = new \Phppot\Member();
+    $loginResult = $member->loginMember();
+}
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
